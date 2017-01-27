@@ -1,0 +1,15 @@
+$color: green;
+
+body{
+	background-color: lighten($color, 20%);
+}
+
+p{
+	font-color: invert($color);
+}
+
+.boxmaster{
+	height: 50px;
+	width: 50px;
+	background-color: darken($color, 10%);
+}

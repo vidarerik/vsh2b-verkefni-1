@@ -1,0 +1,11 @@
+/* Dæmi 4 */
+
+$red: red;
+$bord: 10px;
+$material: groove;
+
+$lala: $bord $material $red;
+
+.kassi{
+	border: $lala;
+}

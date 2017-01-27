@@ -1,0 +1,44 @@
+@charset "utf-8";
+$myColor: blue;
+$bodywidth: 40em;
+$borderW: 10px 2px 0 1px;
+$borderStyle: 3px dotted blue;
+$skilabod: " Þetta er skilaboð til þín frá scss";
+$feitletur: bold;
+$middle: center;
+
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	max-width: $bodywidth;
+	margin: 0 auto;
+	border: $borderW;
+	border: $borderStyle;
+	padding: 0 1em;
+}
+
+.welcome{
+	text-align: $middle;
+}
+
+.box{
+	border: 5px solid $myColor;
+	padding: 10px;
+}
+
+.box2{
+	padding: 10px;
+	border: 2px groove red;
+}
+
+.box2:after {
+	content: $skilabod;
+}
+
+.haus{
+	font-weight: $feitletur;
+}
+
