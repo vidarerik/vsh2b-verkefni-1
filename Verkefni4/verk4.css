@@ -1,0 +1,341 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5; 
+	background: black;
+	color: black;
+	font-family: sans-serif,serif;
+}
+header h2{
+	text-align: center;
+}
+footer{
+	width: 100%;
+	padding: 0.4em;
+	background-color: #CCCCCC;
+}
+
+nav{
+	text-decoration: none;
+	width: 100%;
+	background-color: #FFFFFF;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+nav a:active, nav a:visited{
+	color: black;
+	text-decoration: none;
+}
+nav a:hover{
+	background-color: tomato;
+}
+
+nav ul{
+	list-style: none;
+	text-decoration: none;
+	
+}
+nav ul li{
+	text-decoration: none;
+}
+figure{
+	margin: 0;
+	padding: 0;
+	width: 50%;
+}
+figure img{
+	border: 1px solid #fff;
+}
+figure img:hover{
+	border: 1px solid #ff7b29;
+	cursor: pointer;
+}
+img {
+	display: flex;
+	height: auto;
+	width: 100%;
+}
+
+input {
+  display: none;
+}
+label {
+	color: #0087cc;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	padding: 3px 7px;
+	transition: all .5s ease;
+	background-color: #FFF;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+
+}
+label:hover {
+  	color: #ff7b29;
+}
+input:checked + label {
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+	color: #9799a7;
+}
+
+
+
+.box{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+
+.topMenu{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 2.5em;
+	display: flex;
+	flex-flow: column;
+	position: fixed;
+	bottom: -15em;
+	left: 0;
+}
+	
+.topMenu li{
+	width: 100%;
+	padding: 0.1em;
+	background-color: whitesmoke;
+}
+
+.topMenu a{
+	display: flex;
+	flex-flow: column;
+	text-align: center;
+}
+input:checked ~ nav .topMenu{
+	position: fixed;
+	bottom: 1.85em;
+	left: 0;
+	transition: all .5s ease;
+}
+.body{
+	margin: auto;
+}
+
+.flexin{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.mainHeader{
+	width: 100%;
+	padding: 0.4em;
+	background-color: #CCCCCC;
+}
+
+.mainContent{
+	width: 100%;
+	padding: 0.4em;
+	background-color: #FFFFFF;
+}
+
+.firstSide{
+	width: 100%;
+	padding: 0.4em;
+	background-color: #075e89;
+}
+
+.secondSide{
+	width: 100%;
+	padding: 0.4em;
+	background-color: #075e89;
+}
+
+.navigation nav{
+	background-color: #FFF;
+}
+.button{
+	
+}
+
+/* flex order */
+
+.mainHeader {
+	order: 1;
+}
+
+.mainContent {
+	order: 2;
+}
+
+.firstSide{
+	order: 3;
+}
+
+.secondSide{
+	order: 4;
+}
+
+footer{
+	order: 5;
+}
+
+nav{
+	order: 6;
+}
+
+
+
+/*Mobile*/
+
+@media screen and (min-width: 30em){
+	.box{
+		flex-flow: row;
+	}	
+
+	.firstSide{
+		width: 50%;
+	}
+
+	.secondSide{
+		width: 50%;
+	}
+}
+
+
+/*spjald*/
+
+@media screen and (min-width: 48em){
+	label{
+		display: none;
+	}
+	a{
+		font-size: 70%;
+		text-decoration: none;
+	}
+
+	.topMenu{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		flex-flow: row;
+		position: static;
+		bottom: 100em;
+		left: 50em;
+	}
+	input:checked ~ .topMenu{
+		position: fixed;
+
+		bottom: 4em;
+		left: 0;
+		transition: all 1s ease;
+	}
+	.mainHeader{
+		width: 100%;
+	}
+
+	.mainContent{
+		width: 100%;
+	}
+
+	.firstSide{
+		width: 50%;
+		flex-wrap: wrap;
+	}
+
+	.secondSide{
+		width: 50%;
+		flex-wrap: wrap;
+	}
+
+	footer{
+		width: 100%;
+	}
+	nav{
+		order: 1;
+	}
+	.mainHeader{
+		order: 2;
+	}
+	.mainContent{
+		order: 3;
+	}
+	.firstSide{
+		order: 4;
+	}
+	.secondSide{
+		order: 5;
+	}
+	footer{
+		order: 6;
+	}
+}
+/* Holy grail */
+@media screen and (min-width: 60em){
+
+	html, body{
+		overflow-x: hidden;
+	}
+
+	body{
+		max-width: 60em;
+		margin: 0 auto;
+		z-index: 0;
+	}
+
+	nav {
+		order: 1;
+		height: 4em;
+		position: fixed;
+		margin: 0 -9999rem;
+		width: 100%;
+		padding: 0.25rem 9999rem;
+ 		background: rgba(0, 0, 0, 0.8);
+		z-index: 1;
+		flex-direction: row | row-reverse | column | column-reverse;
+
+	}
+
+	header{
+		margin-top: 45px;
+	}
+	footer{
+		height: auto;
+		width: 100%;
+		order: 6;
+		z-index: 0;
+	}
+
+	.mainHeader{
+		width: 100%;
+		order: 2;
+		z-index: 0;
+	}
+
+	.mainContent{
+		z-index: 0;
+		width: 100%;
+		order: 4;
+	}
+
+	.firstSide{
+		width: 25%;
+		order: 3;
+		z-index: 0;
+	}
+
+	.secondSide{
+		width: 25%;
+		order: 5;
+	}
+	
+}
+
